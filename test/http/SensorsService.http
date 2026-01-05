@@ -1,15 +1,10 @@
 @server=http://localhost:4004
-@username=alice
-@password=
-
 
 ### all
 # @name all_GET
 GET {{server}}/sensors/data/all
-Authorization: Basic {{username}}:{{password}}
 
 
 ### current
 # @name current_GET
 GET {{server}}/sensors/data/current
-Authorization: Basic {{username}}:{{password}}

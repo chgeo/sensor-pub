@@ -2,6 +2,7 @@ using { sensors as db } from '../db/schema';
 
 @rest
 @path: '/sensors/data'
+@requires: 'any'
 service SensorsService {
 
   @readonly entity ![all] as projection on db.Data;
