@@ -8,15 +8,12 @@
     "express": "^4"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve --in-memory"
   },
   "private": true,
   "cds": {
-    "requires": {
-      "db": "sql",
-      "[production]": {
-        "db": "sqlite"
-      }
+    "features": {
+      "in_memory_db": true
     }
   }
 }
