@@ -7,9 +7,9 @@ on:
         default: Staging
         type: string
   workflow_dispatch:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
 permissions:
   contents: read
