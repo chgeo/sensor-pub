@@ -1,6 +1,7 @@
-@server=http://localhost:4004
-@username=alice
-@password=
+# @server=http://localhost:4004
+@server={{$dotenv server-url}}
+@username={{$dotenv updater-user}}
+@password={{$dotenv updater-password}}
 
 
 ### data
@@ -16,9 +17,8 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "time": "2020-02-24T23:00:00.000Z",
-  "temperature": 354.57,
-  "humidity": 713.51
+  "temperature": 23,
+  "humidity": 60
 }
 
 
