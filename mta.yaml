@@ -11,7 +11,7 @@ build-parameters:
         - npm ci
         - npx cds build --production
 modules:
-  - name: sensor-pub-srv
+  - name: sensor-pub
     type: nodejs
     path: gen/srv
     parameters:
@@ -19,10 +19,6 @@ modules:
       buildpack: nodejs_buildpack
     build-parameters:
       builder: npm-ci
-    provides:
-      - name: srv-api # required by consumers of CAP services (e.g. approuter)
-        properties:
-          srv-url: ${default-url}
     requires:
       []
 
