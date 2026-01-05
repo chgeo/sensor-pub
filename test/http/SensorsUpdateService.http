@@ -1,0 +1,42 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### data
+# @name data_GET
+GET {{server}}/sensors/update/data
+Authorization: Basic {{username}}:{{password}}
+
+
+### data
+# @name data_POST
+POST {{server}}/sensors/update/data
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "time": "2020-02-24T23:00:00.000Z",
+  "temperature": 354.57,
+  "humidity": 713.51
+}
+
+
+### data
+# @name data_PATCH
+PATCH {{server}}/sensors/update/data/2020-02-24T23:00:00.000Z
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "time": "2020-02-24T23:00:00.000Z",
+  "temperature": 354.57,
+  "humidity": 713.51
+}
+
+
+### data
+# @name data_DELETE
+DELETE {{server}}/sensors/update/data/2020-02-24T23:00:00.000Z
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
